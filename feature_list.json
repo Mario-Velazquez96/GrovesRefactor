@@ -1,0 +1,10 @@
+{
+  "features": [
+    {
+      "name": "example_renewal_opportunity",
+      "description": "When an Opportunity is Closed Won, create a renewal Opportunity dated one year later.",
+      "sdd": true,
+      "status": "pending"
+    }
+  ]
+}
