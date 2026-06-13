@@ -10,7 +10,7 @@
 - [ ] Load the 10 step rows per Design §Rows table (R12)
 - [ ] Create CMDT `Sequence_Terminal_Status__mdt` with its 2 fields (R13)
 - [ ] Load the 4 terminal-status rows (R13)
-- [ ] Build 10 Lightning Email Templates `Sequence_Email_1..10` from Document.md copy with the three merge fields (R14)
+- [ ] Build 10 Lightning Email Templates `Sequence_Email_1..10` from `project-documents/client_requirement.md` copy with the three merge fields (R14)
 - [ ] Request/create the custom index on `Next_Action_Date__c` (R15) — note: may require Support
 - [ ] Create permission sets `Login_Sequence_Admin` and `Login_Sequence_User` with FLS for all new fields (R16)
 - [ ] Set API version 66.0 on all new metadata (R17)
