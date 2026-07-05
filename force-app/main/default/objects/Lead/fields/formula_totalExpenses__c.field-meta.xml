@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>formula_totalExpenses__c</fullName>
+    <formula>Pg9Rw01__c + 
+Pg9Rw02__c + 
+Pg9Rw03__c + 
+Pg9Rw04__c + 
+Pg9Rw05__c + 
+Pg9Rw06__c + 
+Pg9Rw07__c + 
+Pg9Rw08__c + 
+Pg9Rw09__c + 
+Pg9Rw10__c + 
+Pg9Rw11__c + 
+Pg9Rw18__c + 
+Pg9Rw19__c + 
+Pg9Rw20__c + 
+Pg9Rw21__c + 
+Pg10Rw01__c + 
+Pg10Rw02__c + 
+Pg10Rw03__c + 
+Pg10Rw04__c + 
+Pg10Rw05__c + 
+Pg10Rw06__c + 
+Pg10Rw07__c + 
+Pg10Rw08__c + 
+Pg10Rw09__c + 
+Pg10Rw10__c + 
+Pg10Rw11__c + 
+Pg10Rw12__c + 
+Pg10Rw13__c + 
+Pg10Rw14__c + 
+Pg10Rw15__c + 
+Pg10Rw16__c + 
+Pg10Rw17__c + 
+Pg10Rw18__c + 
+Pg10Rw19__c + 
+Pg10Rw21__c + 
+Pg10Rw22__c + 
+Pg10Rw23__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>formula_totalExpenses</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

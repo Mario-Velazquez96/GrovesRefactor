@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone_Formatted__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( CONTAINS( MobilePhone, &quot;)&quot;), 
+
+MobilePhone, 
+
+IF( ISBLANK( MobilePhone ),
+
+MobilePhone,
+
+&quot;(&quot; &amp; LEFT(MobilePhone, 3) &amp; &quot;) &quot; &amp; MID(MobilePhone, 4, 3) &amp; &quot;-&quot; &amp; RIGHT(MobilePhone, 4)
+
+))</formula>
+    <label>MobilePhone_Formatted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

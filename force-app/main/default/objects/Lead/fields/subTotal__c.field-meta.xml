@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>subTotal__c</fullName>
+    <formula>(Predicted_Social_Security__c + Predicted_Pension__c + Spouse_Social_Security__c + Spouse_Pension__c + Additional_Income1__c + Additional_Income2__c + Additional_Income3__c) - (totalTaxes_Currency__c + Total_Health__c + Additional_Insurance__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>subTotal</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

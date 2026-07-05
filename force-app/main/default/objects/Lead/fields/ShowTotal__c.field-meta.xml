@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShowTotal__c</fullName>
+    <formula>IF(
+TSP_Balance_No_Match__c != 0 &amp;&amp; TEXT( AnnualWithdraw1__c ) == &apos;&apos; , true,
+IF(
+TSP_Balance_No_Match__c != 0 &amp;&amp; TEXT(taxRate5_Picklist__c) == &apos;&apos;, true,
+IF(
+ROTH_Contributions__c != 0 &amp;&amp; TEXT( AnnualWithdraw2__c ) == &apos;&apos;, true,
+
+false
+)))</formula>
+    <label>ShowTotal</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

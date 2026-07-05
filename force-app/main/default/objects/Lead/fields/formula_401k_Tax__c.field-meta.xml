@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>formula_401k_Tax__c</fullName>
+    <formula>Pg7Rw6__c + Pg7Rw7__c + Pg7Rw8__c + Pg7Rw9__c + Pg7Rw10__c + Pg7Rw6_Spouse__c + Pg7Rw7_Spouse__c + Pg7Rw8_Spouse__c + Pg7Rw9_Spouse__c + Pg7Rw10_Spouse__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>formula_401k_Tax</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

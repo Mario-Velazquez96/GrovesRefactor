@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clients_Nearing_Policy_Issuance_Date</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>Carrier__c</columns>
+    <columns>Policy__c</columns>
+    <columns>Policy_Issue_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Policy_Issue_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Annuity_Task_Generated__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Policy Issuance Date</label>
+</ListView>

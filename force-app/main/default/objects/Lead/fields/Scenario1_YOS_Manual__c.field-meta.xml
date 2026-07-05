@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scenario1_YOS_Manual__c</fullName>
+    <description>Manual &quot;Times (x) Years of Service&quot; override for Scenario 1, entered on the FERS workbook pages. NOT maintained by the YOS Flow, so a manual what-if entry survives and is shared across all workbook pages. When blank, the pages fall back to the Flow-computed Scenario1_YOS__c.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Manual Years of Service override for Scenario 1. Leave blank to use the auto-calculated value.</inlineHelpText>
+    <label>Scenario 1 YOS (Manual Override)</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AgeFactorFormula_OptionA__c</fullName>
+    <formula>if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &lt;= 35) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_A_Manual__c, &apos;Under 35&apos;)),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_35_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 35 &amp;&amp; Contact_Age__c &lt;= 39) || ISPICKVAL(Age_Option_A_Manual__c, &apos;35-39&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_37_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 40 &amp;&amp; Contact_Age__c &lt;= 44) || ISPICKVAL(Age_Option_A_Manual__c, &apos;40-44&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_42_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 45 &amp;&amp; Contact_Age__c &lt;= 49) || ISPICKVAL(Age_Option_A_Manual__c, &apos;45-49&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_47_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 50 &amp;&amp; Contact_Age__c &lt;= 54) || ISPICKVAL(Age_Option_A_Manual__c, &apos;50-54&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_52_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 55 &amp;&amp; Contact_Age__c &lt;= 59) || ISPICKVAL(Age_Option_A_Manual__c, &apos;55-59&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_57_BiWeekly.Factor__c ,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &gt;= 60) || ISPICKVAL(Age_Option_A_Manual__c, &apos;60+&apos;),
+ $CustomMetadata.FEGLI_Mapping__mdt.OptionA_60_BiWeekly.Factor__c ,
+
+0
+)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AgeFactorFormula_OptionA</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>formula_monthlyAnnuity__c</fullName>
+    <formula>if(
+ISPICKVAL(Marital_Status__c, &apos;Married&apos;) &amp;&amp;
+
+Scenario1_Retirement_Age__c != 0 &amp;&amp; Scenario1_Primary__c == true &amp;&amp; Min__c == true &amp;&amp; Scenario1_YOS__c &lt; 20,
+
+(((High_3_Salary__c * 0.01) * Scenario1_YOS__c) / 12) - ((((High_3_Salary__c * 0.01) * Scenario1_YOS__c) / 12) * 0.05),
+
+if(
+Scenario1_Retirement_Age__c != 0 &amp;&amp; Scenario1_YOS__c &gt;= 20 &amp;&amp; Scenario1_Primary__c == true &amp;&amp; Min__c == true,
+
+(((High_3_Salary__c * 0.011) * Scenario1_YOS__c) / 12) - ((((High_3_Salary__c * 0.011) * Scenario1_YOS__c) / 12) * 0.05),
+
+if(
+Scenario2_Retirement_Age__c != 0 &amp;&amp; Scenario2_Primary__c == true &amp;&amp; Min__c == true &amp;&amp; Scenario2_YOS__c &lt; 20,
+
+(((High_3_Salary2__c * 0.01) * Scenario2_YOS__c) / 12) - ((((High_3_Salary2__c * 0.01) * Scenario2_YOS__c) / 12) * 0.05),
+
+if(
+Scenario2_Retirement_Age__c != 0 &amp;&amp; Scenario2_YOS__c &gt;= 20 &amp;&amp; Scenario2_Primary__c == true &amp;&amp; Min__c == true,
+
+(((High_3_Salary2__c * 0.011) * Scenario2_YOS__c) / 12) - ((((High_3_Salary2__c * 0.011) * Scenario2_YOS__c) / 12) * 0.05),
+
+if(
+Expected_Retirement_Age__c != 0 &amp;&amp; Scenario2_Primary__c == false &amp;&amp; Scenario1_Primary__c == false &amp;&amp; Min__c == true &amp;&amp; Years_of_Employment__c &lt; 20,
+
+(((High_3_Salary__c * 0.01) * Years_of_Employment__c) / 12) - ((((High_3_Salary__c * 0.01) * Years_of_Employment__c) / 12) * 0.05),
+
+if(
+Expected_Retirement_Age__c != 0 &amp;&amp; Years_of_Employment__c &gt;= 20 &amp;&amp; Scenario2_Primary__c == false &amp;&amp; Scenario1_Primary__c == false &amp;&amp; Min__c == true,
+
+(((High_3_Salary__c * 0.011) * Years_of_Employment__c) / 12) - ((((High_3_Salary__c * 0.011) * Years_of_Employment__c) / 12) * 0.05),
+
+if(
+Scenario1_Retirement_Age__c != 0 &amp;&amp; Scenario1_Primary__c == true &amp;&amp; Max__c == true &amp;&amp; Scenario1_YOS__c &lt; 20,
+
+(((High_3_Salary__c * 0.01) * Scenario1_YOS__c) / 12) - ((((High_3_Salary__c * 0.01) * Scenario1_YOS__c) / 12) * 0.10),
+
+if(
+Scenario1_Retirement_Age__c != 0 &amp;&amp; Scenario1_YOS__c &gt;= 20 &amp;&amp; Scenario1_Primary__c == true &amp;&amp; Max__c == true,
+
+(((High_3_Salary__c * 0.011) * Scenario1_YOS__c) / 12) - ((((High_3_Salary__c * 0.011) * Scenario1_YOS__c) / 12) * 0.10),
+
+if(
+Scenario2_Retirement_Age__c != 0 &amp;&amp; Scenario2_Primary__c == true &amp;&amp; Max__c == true &amp;&amp; Scenario2_YOS__c &lt; 20,
+
+(((High_3_Salary2__c * 0.01) * Scenario2_YOS__c) / 12) - ((((High_3_Salary2__c * 0.01) * Scenario2_YOS__c) / 12) * 0.10),
+
+if(
+Scenario2_Retirement_Age__c != 0 &amp;&amp; Scenario2_YOS__c &gt;= 20 &amp;&amp; Scenario2_Primary__c == true &amp;&amp; Max__c == true,
+
+(((High_3_Salary2__c * 0.011) * Scenario2_YOS__c) / 12) - ((((High_3_Salary2__c * 0.011) * Scenario2_YOS__c) / 12) * 0.10),
+
+if(
+Expected_Retirement_Age__c != 0 &amp;&amp; Scenario2_Primary__c == false &amp;&amp; Scenario1_Primary__c == false &amp;&amp; Max__c == true &amp;&amp; Years_of_Employment__c &lt; 20,
+
+(((High_3_Salary__c * 0.01) * Years_of_Employment__c) / 12) - ((((High_3_Salary__c * 0.01) * Years_of_Employment__c) / 12) * 0.10),
+
+if(
+Expected_Retirement_Age__c != 0 &amp;&amp; Years_of_Employment__c &gt;= 20 &amp;&amp; Scenario2_Primary__c == false &amp;&amp; Scenario1_Primary__c == false &amp;&amp; Max__c == true,
+
+(((High_3_Salary__c * 0.011) * Years_of_Employment__c) / 12) - ((((High_3_Salary__c * 0.011) * Years_of_Employment__c) / 12) * 0.10),
+
+
+0
+
+))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>formula_monthlyAnnuity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

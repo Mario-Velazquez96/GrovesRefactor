@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2nd_Policy_Carrier__c</fullName>
+    <label>2nd Policy Carrier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aetna</fullName>
+                <default>false</default>
+                <label>Aetna</label>
+            </value>
+            <value>
+                <fullName>Ameritas</fullName>
+                <default>false</default>
+                <label>Ameritas</label>
+            </value>
+            <value>
+                <fullName>Athene - Annexus</fullName>
+                <default>false</default>
+                <label>Athene - Annexus</label>
+            </value>
+            <value>
+                <fullName>Athene - National</fullName>
+                <default>false</default>
+                <label>Athene - National</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>CBL</fullName>
+                <default>false</default>
+                <label>CBL</label>
+            </value>
+            <value>
+                <fullName>Cigna</fullName>
+                <default>false</default>
+                <label>Cigna</label>
+            </value>
+            <value>
+                <fullName>EquiTrust - Bridge</fullName>
+                <default>false</default>
+                <label>EquiTrust - Bridge</label>
+            </value>
+            <value>
+                <fullName>Fidelity &amp; Guaranty</fullName>
+                <default>false</default>
+                <label>Fidelity &amp; Guaranty</label>
+            </value>
+            <value>
+                <fullName>Humana</fullName>
+                <default>false</default>
+                <label>Humana</label>
+            </value>
+            <value>
+                <fullName>Ibexis - Annuity</fullName>
+                <default>false</default>
+                <label>Ibexis - Annuity</label>
+            </value>
+            <value>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+                <label>Lincoln</label>
+            </value>
+            <value>
+                <fullName>Mutual of Omaha</fullName>
+                <default>false</default>
+                <label>Mutual of Omaha</label>
+            </value>
+            <value>
+                <fullName>Nationwide</fullName>
+                <default>false</default>
+                <label>Nationwide</label>
+            </value>
+            <value>
+                <fullName>Nationwide CareMatters II</fullName>
+                <default>false</default>
+                <label>Nationwide CareMatters II</label>
+            </value>
+            <value>
+                <fullName>Nationwide CareMatters Together</fullName>
+                <default>false</default>
+                <label>Nationwide CareMatters Together</label>
+            </value>
+            <value>
+                <fullName>North American - Annexus</fullName>
+                <default>false</default>
+                <label>North American - Annexus</label>
+            </value>
+            <value>
+                <fullName>North American - Life</fullName>
+                <default>false</default>
+                <label>North American - Life</label>
+            </value>
+            <value>
+                <fullName>Securian - IUL</fullName>
+                <default>false</default>
+                <label>Securian - IUL</label>
+            </value>
+            <value>
+                <fullName>Securian Term Life Insurance</fullName>
+                <default>false</default>
+                <label>Securian Term Life Insurance</label>
+            </value>
+            <value>
+                <fullName>Transamerica</fullName>
+                <default>false</default>
+                <label>Transamerica</label>
+            </value>
+            <value>
+                <fullName>United Healthcare</fullName>
+                <default>false</default>
+                <label>United Healthcare</label>
+            </value>
+            <value>
+                <fullName>US Fire</fullName>
+                <default>false</default>
+                <label>US Fire</label>
+            </value>
+            <value>
+                <fullName>Charles Schwab</fullName>
+                <default>false</default>
+                <label>Charles Schwab</label>
+            </value>
+            <value>
+                <fullName>Charles Schwab - Roth</fullName>
+                <default>false</default>
+                <label>Charles Schwab - Roth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

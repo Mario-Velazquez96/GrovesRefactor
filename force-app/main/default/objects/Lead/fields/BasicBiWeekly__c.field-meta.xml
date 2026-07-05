@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BasicBiWeekly__c</fullName>
+    <formula>if(
+Basic__c == true &amp;&amp; NOT(ISPICKVAL( Affiliation__c, &apos;United States Postal Service (USPS)&apos;)), ((0.3467 * ((formula_basePay__c + 2000) / 1000)) * 12) / 26, 
+
+if(
+Basic__c == true &amp;&amp; ISPICKVAL( Affiliation__c, &apos;United States Postal Service (USPS)&apos;), 0,
+
+0
+
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BasicBiWeekly</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

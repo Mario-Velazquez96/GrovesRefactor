@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>hiddentaxFormula_TSP_Tax__c</fullName>
+    <formula>if(
+
+ISPICKVAL( taxRate5_Picklist__c , &quot;10%&quot;),
+0.10 * hiddentaxFormula_TSP__c,
+    
+if(
+ISPICKVAL( taxRate5_Picklist__c , &quot;12%&quot;),
+0.12 * hiddentaxFormula_TSP__c,
+
+if(
+ISPICKVAL( taxRate5_Picklist__c , &quot;15%&quot;),
+0.15 * hiddentaxFormula_TSP__c,
+
+if(
+ISPICKVAL( taxRate5_Picklist__c , &quot;20%&quot;),
+0.20 * hiddentaxFormula_TSP__c,
+
+if(
+ISPICKVAL( taxRate5_Picklist__c , &quot;25%&quot;),
+0.25 * hiddentaxFormula_TSP__c,
+
+
+0
+
+)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>hiddentaxFormula_TSP_Tax</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

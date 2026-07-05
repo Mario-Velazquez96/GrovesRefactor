@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AgeFactorformula_Basic__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(
+ Contact_Age__c != 0 &amp;&amp;
+
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c &lt;= 35) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;Under 35&apos;)),
+ $CustomMetadata.FEGLI_Mapping__mdt.Basic_34_BiWeekly.Factor__c, 
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 36) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;36&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_36_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 37) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;37&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_37_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 38) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;38&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_38_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 39) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;39&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_39_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 40) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;40&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_40_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 41) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;41&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_41_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 42) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;42&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_42_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 43) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;43&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_43_BiWeekly.Factor__c,
+
+if(
+(NOT(ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;)) &amp;&amp; Contact_Age__c == 44) || (ISPICKVAL(FEGLI_Code_Picklist__c, &apos;--&apos;) &amp;&amp; ISPICKVAL(Age_Option_Basic_Manual__c, &apos;44&apos;)),
+$CustomMetadata.FEGLI_Mapping__mdt.Basic_44_BiWeekly.Factor__c,
+
+
+
+0
+))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AgeFactorformula_Basic</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prefer_Text__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does the contact prefer text over email or phone call?</description>
+    <inlineHelpText>Does the contact prefer text over email or phone call?</inlineHelpText>
+    <label>Prefer Text?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

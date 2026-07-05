@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_Option_A_Manual__c</fullName>
+    <label>Age Option A Manual</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Under 35</fullName>
+                <default>false</default>
+                <label>Under 35</label>
+            </value>
+            <value>
+                <fullName>35-39</fullName>
+                <default>false</default>
+                <label>35-39</label>
+            </value>
+            <value>
+                <fullName>40-44</fullName>
+                <default>false</default>
+                <label>40-44</label>
+            </value>
+            <value>
+                <fullName>45-49</fullName>
+                <default>false</default>
+                <label>45-49</label>
+            </value>
+            <value>
+                <fullName>50-54</fullName>
+                <default>false</default>
+                <label>50-54</label>
+            </value>
+            <value>
+                <fullName>55-59</fullName>
+                <default>false</default>
+                <label>55-59</label>
+            </value>
+            <value>
+                <fullName>60+</fullName>
+                <default>false</default>
+                <label>60+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

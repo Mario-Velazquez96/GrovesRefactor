@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Basic_Benefit__c</fullName>
+    <description>FEGLI Basic Life total current benefit = BIA x (1 + age multiplication factor). The age source is Age_Option_Basic_Manual__c (picklist) ONLY when no FEGLI code is set AND that picklist is filled in; in every other case Contact_Age__c is used. Replaces the previous hiddenTotalBenefitformula__c, which did not handle the manual-age path correctly.</description>
+    <formula>/*
+ * Total Basic Benefit
+ *   = BIA + (BIA x age factor)
+ *   = BIA x (1 + factor)
+ *   where BIA = formula_basePay__c + 2000
+ *
+ * Age source:
+ *   - Age_Option_Basic_Manual__c when no FEGLI code AND the picklist is set
+ *   - Contact_Age__c in every other case (FEGLI code set, OR manual age blank)
+ *
+ * Age 45+ or unset -&gt; factor 0  -&gt; result is just BIA (no extra benefit).
+ */
+IF(
+    AND(
+        OR(
+            ISBLANK(TEXT(FEGLI_Code_Picklist__c)),
+            TEXT(FEGLI_Code_Picklist__c) = &quot;--&quot;
+        ),
+        NOT(ISBLANK(TEXT(Age_Option_Basic_Manual__c)))
+    ),
+
+    /* ---- Path A: manual age picklist ---- */
+    CASE(TEXT(Age_Option_Basic_Manual__c),
+        &quot;Under 35&quot;, (formula_basePay__c + 2000) * 2.0,   /* factor 1.0 */
+        &quot;36&quot;,       (formula_basePay__c + 2000) * 1.9,   /* factor 0.9 */
+        &quot;37&quot;,       (formula_basePay__c + 2000) * 1.8,   /* factor 0.8 */
+        &quot;38&quot;,       (formula_basePay__c + 2000) * 1.7,   /* factor 0.7 */
+        &quot;39&quot;,       (formula_basePay__c + 2000) * 1.6,   /* factor 0.6 */
+        &quot;40&quot;,       (formula_basePay__c + 2000) * 1.5,   /* factor 0.5 */
+        &quot;41&quot;,       (formula_basePay__c + 2000) * 1.4,   /* factor 0.4 */
+        &quot;42&quot;,       (formula_basePay__c + 2000) * 1.3,   /* factor 0.3 */
+        &quot;43&quot;,       (formula_basePay__c + 2000) * 1.2,   /* factor 0.2 */
+        &quot;44&quot;,       (formula_basePay__c + 2000) * 1.1,   /* factor 0.1 */
+        formula_basePay__c + 2000                        /* default (45+ / unmatched) */
+    ),
+
+    /* ---- Path B: Contact_Age__c (computed from DOB) ---- */
+    IF(AND(Contact_Age__c &gt; 0, Contact_Age__c &lt;= 35), (formula_basePay__c + 2000) * 2.0,
+    IF(Contact_Age__c = 36, (formula_basePay__c + 2000) * 1.9,
+    IF(Contact_Age__c = 37, (formula_basePay__c + 2000) * 1.8,
+    IF(Contact_Age__c = 38, (formula_basePay__c + 2000) * 1.7,
+    IF(Contact_Age__c = 39, (formula_basePay__c + 2000) * 1.6,
+    IF(Contact_Age__c = 40, (formula_basePay__c + 2000) * 1.5,
+    IF(Contact_Age__c = 41, (formula_basePay__c + 2000) * 1.4,
+    IF(Contact_Age__c = 42, (formula_basePay__c + 2000) * 1.3,
+    IF(Contact_Age__c = 43, (formula_basePay__c + 2000) * 1.2,
+    IF(Contact_Age__c = 44, (formula_basePay__c + 2000) * 1.1,
+    formula_basePay__c + 2000                             /* default (45+ or unset) */
+    ))))))))))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Basic Benefit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

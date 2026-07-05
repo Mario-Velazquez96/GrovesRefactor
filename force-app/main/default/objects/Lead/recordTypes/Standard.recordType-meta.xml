@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard</fullName>
+    <active>true</active>
+    <businessProcess>Lead Processes</businessProcess>
+    <compactLayoutAssignment>Standard_Leads_Compact_Layout</compactLayoutAssignment>
+    <description>The main record type for Groves Insurance Group Leads</description>
+    <label>Standard</label>
+    <picklistValues>
+        <picklist>Affiliation__c</picklist>
+        <values>
+            <fullName>Department of Defense %28DOD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federal Aviation Administration %28FAA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federal Aviation Administration Manager%27s Association %28FAAMA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Security Administration %28SSA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U%2ES%2E Department of Agriculture %28USDA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States Bureau of Reclamation %28USBR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States Postal Service %28USPS%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Age_Option_A_Manual__c</picklist>
+        <values>
+            <fullName>35-39</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40-44</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>55-59</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 35</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Age_Option_B_Manual__c</picklist>
+        <values>
+            <fullName>35-39</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40-44</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>55-59</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60-64</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65-69</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70-74</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75-79</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 35</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Age_Option_Basic_Manual__c</picklist>
+        <values>
+            <fullName>36</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>39</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>41</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>42</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>43</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>44</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 35</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Age_Option_C_Manual__c</picklist>
+        <values>
+            <fullName>35-39</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40-44</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>55-59</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60-64</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65-69</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70-74</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75-79</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under 35</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AnnualWithdraw1__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AnnualWithdraw2__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Appointment_Results__c</picklist>
+        <values>
+            <fullName>NO OPPORTUNITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO SALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Appointment_Time__c</picklist>
+        <values>
+            <fullName>1%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Best_Day_of_the_Week_to_Contact__c</picklist>
+        <values>
+            <fullName>Friday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saturday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thursday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuesday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wednesday</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Best_Time_to_Contact__c</picklist>
+        <values>
+            <fullName>Afternoon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Back_Time__c</picklist>
+        <values>
+            <fullName>1%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carrier__c</picklist>
+        <values>
+            <fullName>Aetna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ameritas Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Schwab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Schwab-Roth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cigna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EquiTrust - Bridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fidelity %26 Guaranty Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibexis - Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln National Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutual of Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters Together</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide LTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Roth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protective Life Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian - IUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian Term Life Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transamerica Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Fire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Healthcare</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employment_Status__c</picklist>
+        <values>
+            <fullName>Full-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self Employed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FEGLI_Code_Picklist__c</picklist>
+        <values>
+            <fullName>--</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Ao</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Go</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ko</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Po</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>So</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Z5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FEGLI_Plan__c</picklist>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Federal_Employee__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonbinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_Did_You_Hear__c</picklist>
+        <values>
+            <fullName>Co-Worker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Union%2FAssociation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investment_Risk_Question_1__c</picklist>
+        <values>
+            <fullName>Sell 25%25 to 50%25 of the investments in my account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sell 50%25 to 75%25 of the investments in my account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sell less than 25%25 of the investments in my account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sell more than 75%25 of the investments in my account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wouldn%E2%80%99t make any changes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investment_Risk_Question_2__c</picklist>
+        <values>
+            <fullName>1 - Prefer Lower-risk investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Comfortable with mostly lower-risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Prefer Moderate risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Somewhat comfortable with risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Comfortable with higher-risk investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - Risk is not a concern</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investment_Risk_Question_3__c</picklist>
+        <values>
+            <fullName>1 - None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 - Expert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Comfortable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - Comfortable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 - Extensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 - Extensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 - Expert</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investment_Risk_Question_4__c</picklist>
+        <values>
+            <fullName>I like to actively manage my own investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer to let others manage for me</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advisory Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Social Security Workshop 9%2F16%2F2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Social Security Workshop 9%2F18%2F2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 1%2F27%2F2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 1%2F29%2F2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 12%2F2%2F2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 12%2F4%2F2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 3%2F3%2F2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIG Taxes in Retirement Workshop 3%2F5%2F2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marital_Status__c</picklist>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registered Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multiples_B_Manual__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multiples_C_Manual__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mx%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Option_B_Choice_Selection__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Option_C_Choice_Selection__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Scenario__c</picklist>
+        <values>
+            <fullName>Default</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Scenario 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scenario 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>He%2FHim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>He%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FThem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reset_Time__c</picklist>
+        <values>
+            <fullName>1%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salary_Interval__c</picklist>
+        <values>
+            <fullName>Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bi-Weekly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hourly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Spouse_Option__c</picklist>
+        <values>
+            <fullName>Maximum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Opt Out</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X2nd_Policy_Carrier__c</picklist>
+        <values>
+            <fullName>Aetna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ameritas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Schwab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Schwab - Roth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cigna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EquiTrust - Bridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fidelity %26 Guaranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibexis - Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutual of Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters Together</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian - IUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian Term Life Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transamerica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Fire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Healthcare</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X3rd_Policy_Carrier__c</picklist>
+        <values>
+            <fullName>Aetna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ameritas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athene - National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cigna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EquiTrust - Bridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fidelity %26 Guaranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibexis - Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutual of Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide CareMatters Together</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Annexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American - Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian - IUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securian Term Life Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transamerica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Fire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Healthcare</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_34__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_35_39__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_40_44__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_45_49__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_50_54__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_55_59__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_60_64__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_65_69__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_70_74__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_75_79__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Years_80__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>taxRate1_Picklist__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>taxRate2_Picklist__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>taxRate3_Picklist__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>taxRate4_Picklist__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>taxRate5_Picklist__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

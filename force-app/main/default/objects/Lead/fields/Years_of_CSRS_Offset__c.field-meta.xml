@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Years_of_CSRS_Offset__c</fullName>
+    <description>Number of years the employee has been covered under CSRS Offset (used to compute the Social Security offset percentage: years / 40).</description>
+    <externalId>false</externalId>
+    <label>Years of CSRS Offset</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
