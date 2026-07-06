@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>Lead.Federal_Leads_Compact_Layout</members>
+		<members>Lead.Standard_Leads_Compact_Layout</members>
+		<name>CompactLayout</name>
+	</types>
+	<types>
 		<members>Lead.Add_a_2nd_Policy__c</members>
 		<members>Lead.Add_a_3rd_Policy__c</members>
 		<members>Lead.Additional_Income1__c</members>
@@ -346,6 +351,39 @@
 	<types>
 		<members>Lead</members>
 		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Federal_Lead_Record_Page</members>
+		<members>Lead_Generation_UtilityBar</members>
+		<members>Lead_Record_Page</members>
+		<members>Sales_Leadership_UtilityBar</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Annuity_Process_Renewal</members>
+		<members>LeadFields_BeforeUpdates</members>
+		<members>Rollover_Opportunity</members>
+		<members>updateSnapshotFields</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Lead-Federal Lead Record Layout</members>
+		<members>Lead-Lead Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Lead.Federal</members>
+		<members>Lead.Standard</members>
+		<name>RecordType</name>
+	</types>
+	<types>
+		<members>Lead.Federal_Form_Preview</members>
+		<members>Lead.GoogleMaps</members>
+		<members>Lead.GoogleNews</members>
+		<members>Lead.GoogleSearch</members>
+		<members>Lead.No_Opportunity</members>
+		<members>Lead.aiell__aiPLbtn_PrintLabel_Lead</members>
+		<name>WebLink</name>
 	</types>
 	<version>67.0</version>
 </Package>

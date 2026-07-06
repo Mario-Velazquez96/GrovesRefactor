@@ -1,0 +1,2043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_FEGLI</name>
+        <label>Assign_FEGLI</label>
+        <locationX>116</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>fegliPicklist</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Basic;</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>basicSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionAYes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_FEGLIA</name>
+        <label>Assign_FEGLI</label>
+        <locationX>116</locationX>
+        <locationY>947</locationY>
+        <assignmentItems>
+            <assignToReference>fegliPicklist</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Option A;</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>aSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionCYes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_FEGLIB</name>
+        <label>Assign_FEGLIB</label>
+        <locationX>116</locationX>
+        <locationY>1547</locationY>
+        <assignmentItems>
+            <assignToReference>fegliPicklist</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Option B;</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>StartingAgeYears</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_FEGLIC</name>
+        <label>Assign_FEGLIC</label>
+        <locationX>116</locationX>
+        <locationY>1247</locationY>
+        <assignmentItems>
+            <assignToReference>fegliPicklist</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Option C;</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>CSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionBYes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>No_C</name>
+        <label>NoC</label>
+        <locationX>380</locationX>
+        <locationY>1247</locationY>
+        <assignmentItems>
+            <assignToReference>CSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionBYes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>NoA</name>
+        <label>NoA</label>
+        <locationX>380</locationX>
+        <locationY>947</locationY>
+        <assignmentItems>
+            <assignToReference>aSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionCYes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>NoB</name>
+        <label>NoB</label>
+        <locationX>380</locationX>
+        <locationY>1547</locationY>
+        <assignmentItems>
+            <assignToReference>BSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>StartingAgeYears</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>NoBasic</name>
+        <label>NoBasic</label>
+        <locationX>380</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>basicSet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OptionAYes</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Annuity_Scenario</name>
+        <label>Annuity Scenario</label>
+        <locationX>248</locationX>
+        <locationY>2147</locationY>
+        <defaultConnector>
+            <targetReference>Annuity_Scenario2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Valid</defaultConnectorLabel>
+        <rules>
+            <name>Min</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Min__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Spouse_Option__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Minimum</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Min__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Min__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Min_Chosen</targetReference>
+            </connector>
+            <label>Min</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Annuity_Scenario2</name>
+        <label>Annuity Scenario</label>
+        <locationX>446</locationX>
+        <locationY>2255</locationY>
+        <defaultConnector>
+            <targetReference>No_Change</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Valid</defaultConnectorLabel>
+        <rules>
+            <name>Max</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Max__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Spouse_Option__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Maximum</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Max__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Max__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Max_Chosen</targetReference>
+            </connector>
+            <label>Max</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Basic_Life</name>
+        <label>Basic Life</label>
+        <locationX>248</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>NoBasic</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Basic</defaultConnectorLabel>
+        <rules>
+            <name>Basic</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (4 AND 5) OR (4 AND 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Ao</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Bo</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Basic__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_FEGLI</targetReference>
+            </connector>
+            <label>Basic</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>OptionAYes</name>
+        <label>OptionA</label>
+        <locationX>248</locationX>
+        <locationY>839</locationY>
+        <defaultConnector>
+            <targetReference>NoA</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No OptionA</defaultConnectorLabel>
+        <rules>
+            <name>OptionA</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4) OR (3 AND 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>getFegliCode.Contains_A__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OptionA__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_FEGLIA</targetReference>
+            </connector>
+            <label>OptionA</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>OptionBYes</name>
+        <label>OptionB</label>
+        <locationX>248</locationX>
+        <locationY>1439</locationY>
+        <defaultConnector>
+            <targetReference>NoB</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No OptionB</defaultConnectorLabel>
+        <rules>
+            <name>OptionB</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4) OR (3 AND 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>getFegliCode.BChoiceValue__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OptionB__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_FEGLIB</targetReference>
+            </connector>
+            <label>OptionB</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>OptionCYes</name>
+        <label>OptionC</label>
+        <locationX>248</locationX>
+        <locationY>1139</locationY>
+        <defaultConnector>
+            <targetReference>No_C</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No OptionC</defaultConnectorLabel>
+        <rules>
+            <name>OptionC</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4) OR (3 AND 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>getFegliCode.CChoiceValue__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OptionC__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>--</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FEGLI_Code_Picklist__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_FEGLIC</targetReference>
+            </connector>
+            <label>OptionC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Primary_Scenario</name>
+        <label>Primary Scenario</label>
+        <locationX>248</locationX>
+        <locationY>2639</locationY>
+        <defaultConnector>
+            <targetReference>Primary_Scenario_2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Valid</defaultConnectorLabel>
+        <rules>
+            <name>Scenario_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Scenario1_Primary__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Primary_Scenario__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Scenario 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Scenario1_Primary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Scenario1_Primary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Scenario_1_is_Primary</targetReference>
+            </connector>
+            <label>Scenario 1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Primary_Scenario_2</name>
+        <label>Primary Scenario</label>
+        <locationX>446</locationX>
+        <locationY>2747</locationY>
+        <defaultConnector>
+            <targetReference>No_Primary_Scenario</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Valid</defaultConnectorLabel>
+        <rules>
+            <name>Scenario_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Scenario2_Primary__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Primary_Scenario__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Scenario_2</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Scenario2_Primary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Scenario2_Primary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Scenario_2_is_Primary</targetReference>
+            </connector>
+            <label>Scenario 2</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>recordType</name>
+        <label>recordType</label>
+        <locationX>545</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>updateStandardLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Standard</defaultConnectorLabel>
+        <rules>
+            <name>Federal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Federal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>getFegliCode</targetReference>
+            </connector>
+            <label>Federal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>StartingAgeYears</name>
+        <label>StartingAgeYears</label>
+        <locationX>248</locationX>
+        <locationY>1739</locationY>
+        <defaultConnector>
+            <targetReference>updateLead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Set</defaultConnectorLabel>
+        <rules>
+            <name>Set</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Starting_Age__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Starting_Age_Set__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>updateLead_with_Override</targetReference>
+            </connector>
+            <label>Set</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>EndingAge</name>
+        <dataType>Number</dataType>
+        <expression>100
+
+/* if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;5&quot;),
+$Record.Starting_Age__c + 5,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;10&quot;),
+$Record.Starting_Age__c + 10,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;15&quot;),
+$Record.Starting_Age__c + 15,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;20&quot;),
+$Record.Starting_Age__c + 20,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;25&quot;),
+$Record.Starting_Age__c + 25,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;30&quot;),
+$Record.Starting_Age__c + 30,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;35&quot;),
+$Record.Starting_Age__c + 35,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;40&quot;),
+$Record.Starting_Age__c + 40,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;45&quot;),
+$Record.Starting_Age__c + 45,
+if(
+ISPICKVAL( $Record.Total_of_Years__c , &quot;50&quot;),
+$Record.Starting_Age__c + 50,
+
+0
+)))))))))) */</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_34</name>
+        <dataType>Number</dataType>
+        <expression>if(
+ISPICKVAL( {!$Record.Years_34__c}, &quot;1&quot;),
+1,
+
+
+0)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_3539</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age_Set__c} == false &amp;&amp;
+
+{!$Record.Starting_Age__c} == 39,
+1,
+if(
+{!$Record.Starting_Age__c} == 38,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 37,
+3,
+if(
+{!$Record.Starting_Age__c} == 36,
+4,
+if(
+{!$Record.Starting_Age__c} == 35, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 35 &amp;&amp; {!EndingAge} &gt;= 39,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 40,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_4044</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 44,
+1,
+if(
+{!$Record.Starting_Age__c} == 43,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 42,
+3,
+if(
+{!$Record.Starting_Age__c} == 41,
+4,
+if(
+{!$Record.Starting_Age__c} == 40, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 40 &amp;&amp; {!EndingAge} &gt;= 44,
+
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 45,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_4549</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 49,
+1,
+if(
+{!$Record.Starting_Age__c} == 48,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 47,
+3,
+if(
+{!$Record.Starting_Age__c} == 46,
+4,
+if(
+{!$Record.Starting_Age__c} == 45, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 45 &amp;&amp; {!EndingAge} &gt;= 49,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 50,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_5054</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 54,
+1,
+if(
+{!$Record.Starting_Age__c} == 53,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 52,
+3,
+if(
+{!$Record.Starting_Age__c} == 51,
+4,
+if(
+{!$Record.Starting_Age__c} == 50, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;=50 &amp;&amp; {!EndingAge} &gt;= 54,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 55,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_5559</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 59,
+1,
+if(
+{!$Record.Starting_Age__c} == 58,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 57,
+3,
+if(
+{!$Record.Starting_Age__c} == 56,
+4,
+if(
+{!$Record.Starting_Age__c} == 55, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 55 &amp;&amp; {!EndingAge} &gt;= 59,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 60,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_6064</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age_Set__c} == false &amp;&amp;
+
+{!$Record.Starting_Age__c} == 64,
+1,
+if(
+{!$Record.Starting_Age__c} == 63,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 62,
+3,
+if(
+{!$Record.Starting_Age__c} == 61,
+4,
+if(
+{!$Record.Starting_Age__c} == 60, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 61 &amp;&amp; {!EndingAge} &gt;= 65,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 65,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_6569</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 69,
+1,
+if(
+{!$Record.Starting_Age__c} == 68,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 67,
+3,
+if(
+{!$Record.Starting_Age__c} == 66,
+4,
+if(
+{!$Record.Starting_Age__c} == 65, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 65 &amp;&amp; {!EndingAge} &gt;= 69,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 70,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_7074</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 74,
+1,
+if(
+{!$Record.Starting_Age__c} == 73,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 72,
+3,
+if(
+{!$Record.Starting_Age__c} == 71,
+4,
+if(
+{!$Record.Starting_Age__c} == 70, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 70 &amp;&amp; {!EndingAge} &gt;= 74,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 75,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_7579</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} == 79,
+1,
+if(
+{!$Record.Starting_Age__c} == 78,
+ 2,
+if(
+{!$Record.Starting_Age__c} == 77,
+3,
+if(
+{!$Record.Starting_Age__c} == 76,
+4,
+if(
+{!$Record.Starting_Age__c} == 75, 
+5,
+if(
+{!$Record.Starting_Age__c} &lt;= 75 &amp;&amp; {!EndingAge} &gt;= 79,
+5,
+if(
+{!$Record.Starting_Age__c} &gt;= 80,
+0, 
+0
+)))))))</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_80</name>
+        <dataType>Number</dataType>
+        <expression>if(
+{!$Record.Starting_Age__c} != 0, 
+5,
+
+0
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>formula_addlInsurance</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Pg10Rw20__c} + {!$Record.Pg10Rw20_Spouse__c} + {!$Record.Pg9Rw12__c} + {!$Record.Pg9Rw12_Spouse__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_annuityDefault</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+{!$Record.CSRS_Annuity_Retirement__c} = 0.00,
+({!$Record.Base_Salary__c} * {!$Record.Years_of_Employment__c}) * 0.01,
+{!$Record.CSRS_Annuity_Retirement__c} 
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_checkboxes</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+ISCHANGED( {!$Record.Scenario1_Primary__c} ) &amp;&amp; {!$Record.Scenario1_Primary__c} == true,
+{!$Record.Scenario2_Primary__c} == false,
+IF(
+ISCHANGED( {!$Record.Scenario2_Primary__c} ) &amp;&amp; {!$Record.Scenario2_Primary__c} == true,
+{!$Record.Scenario1_Primary__c} == false,
+false
+))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_Evaluation</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISCHANGED( {!$Record.taxRate1_Picklist__c} ),
+ISCHANGED( {!$Record.taxRate2_Picklist__c} ),
+ISCHANGED( {!$Record.taxRate3_Picklist__c} ),
+ISCHANGED( {!$Record.taxRate4_Picklist__c} ),
+ISCHANGED( {!$Record.taxRate5_Picklist__c} ),
+ISCHANGED( {!$Record.AnnualWithdraw1__c} ),
+ISCHANGED( {!$Record.AnnualWithdraw2__c} ),
+ISCHANGED( {!$Record.Pg9Rw01_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw02_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw03_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw04_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw05_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw06_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw07_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw08_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw09_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw10_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw11_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw12_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw13_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw14_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw15_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw16_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw17_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw18_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw19_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw20_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw21_Spouse__c} ),
+ISCHANGED( {!$Record.Pg9Rw01__c} ),
+ISCHANGED( {!$Record.Pg9Rw02__c} ),
+ISCHANGED( {!$Record.Pg9Rw03__c} ),
+ISCHANGED( {!$Record.Pg9Rw04__c} ),
+ISCHANGED( {!$Record.Pg9Rw05__c} ),
+ISCHANGED( {!$Record.Pg9Rw06__c} ),
+ISCHANGED( {!$Record.Pg9Rw07__c} ),
+ISCHANGED( {!$Record.Pg9Rw08__c} ),
+ISCHANGED( {!$Record.Pg9Rw09__c} ),
+ISCHANGED( {!$Record.Pg9Rw10__c} ),
+ISCHANGED( {!$Record.Pg9Rw11__c} ),
+ISCHANGED( {!$Record.Pg9Rw12__c} ),
+ISCHANGED( {!$Record.Pg9Rw13__c} ),
+ISCHANGED( {!$Record.Pg9Rw14__c} ),
+ISCHANGED( {!$Record.Pg9Rw15__c} ),
+ISCHANGED( {!$Record.Pg9Rw16__c} ),
+ISCHANGED( {!$Record.Pg9Rw17__c} ),
+ISCHANGED( {!$Record.Pg9Rw18__c} ),
+ISCHANGED( {!$Record.Pg9Rw19__c} ),
+ISCHANGED( {!$Record.Pg9Rw20__c} ),
+ISCHANGED( {!$Record.Pg9Rw21__c} ),
+ISCHANGED( {!$Record.Pg10Rw01_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw02_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw03_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw04_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw05_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw06_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw07_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw08_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw09_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw10_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw11_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw12_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw13_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw14_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw15_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw16_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw17_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw18_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw19_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw20_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw21_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw22_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw23_Spouse__c} ),
+ISCHANGED( {!$Record.Pg10Rw01__c} ),
+ISCHANGED( {!$Record.Pg10Rw02__c} ),
+ISCHANGED( {!$Record.Pg10Rw03__c} ),
+ISCHANGED( {!$Record.Pg10Rw04__c} ),
+ISCHANGED( {!$Record.Pg10Rw05__c} ),
+ISCHANGED( {!$Record.Pg10Rw06__c} ),
+ISCHANGED( {!$Record.Pg10Rw07__c} ),
+ISCHANGED( {!$Record.Pg10Rw08__c} ),
+ISCHANGED( {!$Record.Pg10Rw09__c} ),
+ISCHANGED( {!$Record.Pg10Rw10__c} ),
+ISCHANGED( {!$Record.Pg10Rw11__c} ),
+ISCHANGED( {!$Record.Pg10Rw12__c} ),
+ISCHANGED( {!$Record.Pg10Rw13__c} ),
+ISCHANGED( {!$Record.Pg10Rw14__c} ),
+ISCHANGED( {!$Record.Pg10Rw15__c} ),
+ISCHANGED( {!$Record.Pg10Rw16__c} ),
+ISCHANGED( {!$Record.Pg10Rw17__c} ),
+ISCHANGED( {!$Record.Pg10Rw18__c} ),
+ISCHANGED( {!$Record.Pg10Rw19__c} ),
+ISCHANGED( {!$Record.Pg10Rw20__c} ),
+ISCHANGED( {!$Record.Pg10Rw21__c} ),
+ISCHANGED( {!$Record.Pg10Rw22__c} ),
+ISCHANGED( {!$Record.Pg10Rw23__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_leadMobileformatted</name>
+        <dataType>String</dataType>
+        <expression>&quot;(&quot; &amp; LEFT({!$Record.MobilePhone}, 3) &amp; &quot;) &quot; &amp; MID({!$Record.MobilePhone}, 4, 3) &amp; &quot;-&quot; &amp; RIGHT({!$Record.MobilePhone}, 4)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_leadPhoneformatted</name>
+        <dataType>String</dataType>
+        <expression>&quot;(&quot; &amp; LEFT({!$Record.Phone}, 3) &amp; &quot;) &quot; &amp; MID({!$Record.Phone}, 4, 3) &amp; &quot;-&quot; &amp; RIGHT({!$Record.Phone}, 4)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_ManualAgeB</name>
+        <dataType>String</dataType>
+        <expression>if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &lt;= 35,
+&apos;Under 35&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 35 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 39,
+&apos;35-39&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 40 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 44,
+&apos;40-44&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 45 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 49,
+&apos;45-49&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 50 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 54,
+&apos;50-54&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 55 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 59,
+&apos;55-59&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 60 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 64,
+&apos;60-64&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 65 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 69,
+&apos;65-69&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 70 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 74,
+&apos;70-74&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &gt;= 75 &amp;&amp; {!$Record.Starting_Age__c}  &lt;= 79,
+&apos;75-79&apos;,
+if(
+{!$Record.Starting_Age_Set__c} == true &amp;&amp; {!$Record.Starting_Age__c} != {!$Record.Contact_Age__c} &amp;&amp; {!$Record.Starting_Age__c} &lt;=  80,
+&apos;80+&apos;,
+&apos;&apos;
+)))))))))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_OptionB</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+NOT(ISPICKVAL({!$Record.Option_B_Choice_Selection__c} , &apos;&apos;)),
+true,
+false
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_OptionC</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+NOT(ISPICKVAL({!$Record.Option_C_Choice_Selection__c} , &apos;&apos;)),
+true,
+false
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_pension</name>
+        <dataType>Currency</dataType>
+        <expression>if(
+{!$Record.Opt_Out__c} == false &amp;&amp; ISPICKVAL({!$Record.Marital_Status__c}, &apos;Married&apos;),
+{!$Record.formula_monthlyAnnuity__c},
+if(
+{!$Record.Opt_Out__c} == true &amp;&amp; ISPICKVAL({!$Record.Marital_Status__c}, &apos;Married&apos;),
+{!$Record.OptedOut_Annuity__c},
+
+{!$Record.formula_annuityNotMarried__c}
+))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_survivingspouse</name>
+        <dataType>Currency</dataType>
+        <expression>if( 
+{!$Record.Opt_Out__c} == false &amp;&amp; {!$Record.Min__c} == true, 
+{!$Record.formula_monthlyAnnuity__c} - ({!$Record.formula_monthlyAnnuity__c} * 0.75),
+if( 
+{!$Record.Opt_Out__c} == false &amp;&amp; {!$Record.Max__c} == true, 
+{!$Record.formula_monthlyAnnuity__c} - ({!$Record.formula_monthlyAnnuity__c} * 0.50),
+0
+))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_totalDollars</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+NOT(ISPICKVAL({!$Record.Option_B_Choice_Selection__c} , &apos;&apos; )) ,
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.02) * 26) *VALUE( TEXT(  {!$Record.Years_34__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.02) * 26) * VALUE( TEXT( {!$Record.Years_35_39__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.03) * 26) * VALUE( TEXT( {!$Record.Years_40_44__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.06) * 26) * VALUE( TEXT( {!$Record.Years_45_49__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.10) * 26) * VALUE( TEXT( {!$Record.Years_50_54__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.18) * 26) * VALUE( TEXT( {!$Record.Years_55_59__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.40) * 26) * VALUE( TEXT(  {!$Record.Years_60_64__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.48) * 26) * VALUE( TEXT( {!$Record.Years_65_69__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  0.86) * 26) * VALUE( TEXT( {!$Record.Years_70_74__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} * 1.80) * 26) * VALUE( TEXT( {!$Record.Years_75_79__c} ))  +
+(( {!$Record.OptionB_Insurance_Cover__c} *  2.88) * 26) * VALUE( TEXT( {!$Record.Years_80__c} )),
+0
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_totalHealth</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Pg9Rw13__c} + {!$Record.Pg9Rw14__c} + {!$Record.Pg9Rw15__c} + {!$Record.Pg9Rw16__c} + {!$Record.Pg9Rw17__c} + {!$Record.Pg9Rw13_Spouse__c} + {!$Record.Pg9Rw14_Spouse__c} + {!$Record.Pg9Rw15_Spouse__c}+ {!$Record.Pg9Rw16_Spouse__c} + {!$Record.Pg9Rw17_Spouse__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_tspBalance</name>
+        <dataType>Currency</dataType>
+        <expression>if(
+{!$Record.TSP_Contribution__c} &gt;= 0.15,
+( {!$Record.TSP_Balance_No_Match__c} * 0.05 ) + {!$Record.TSP_Balance_No_Match__c},
+if(
+{!$Record.ROTH_TSP_Contribution__c} &gt;= 0.15,
+{!$Record.ROTH_TSP_Contribution__c} * 0.05,
+if(
+({!$Record.TSP_Contribution__c} + {!$Record.ROTH_TSP_Contribution__c}) &gt;= 0.15,
+ ( {!$Record.TSP_Balance_No_Match__c} * 0.05 ) + {!$Record.TSP_Balance_No_Match__c},
+
+{!$Record.TSP_Balance__c}
+)))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_YOS1</name>
+        <dataType>Number</dataType>
+        <expression>if(  {!$Record.Scenario1_Retirement_Age__c} != 0,
+
+{!$Record.Scenario1_Retirement_Age__c} - ABS((FLOOR(({!$Record.Date_of_Birth__c} -  {!$Record.Date_of_Hire__c }) / 365.25))),
+
+0
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>formula_YOS2</name>
+        <dataType>Number</dataType>
+        <expression>if( {!$Record.Scenario2_Retirement_Age__c} != 0,
+
+{!$Record.Scenario2_Retirement_Age__c} - ABS((FLOOR(({!$Record.Date_of_Birth__c} -  {!$Record.Date_of_Hire__c }) / 365.25))),
+
+0
+
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>updateSnapshotFields {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>updateSnapshotFields_forPROD</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>getFegliCode</name>
+        <label>getFegliCode</label>
+        <locationX>248</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Basic_Life</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Label</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.FEGLI_Code_Picklist__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FEGLI_Code__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Max_Chosen</name>
+        <label>Max Chosen</label>
+        <locationX>314</locationX>
+        <locationY>2363</locationY>
+        <connector>
+            <targetReference>Primary_Scenario</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Max__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Max__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Min__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Option__c</field>
+            <value>
+                <stringValue>Maximum</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Pension__c</field>
+            <value>
+                <elementReference>$Record.formula_SurvivingSpouse__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Min_Chosen</name>
+        <label>Min Chosen</label>
+        <locationX>50</locationX>
+        <locationY>2255</locationY>
+        <connector>
+            <targetReference>Primary_Scenario</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Min__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Max__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Min__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Option__c</field>
+            <value>
+                <stringValue>Minimum</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Pension__c</field>
+            <value>
+                <elementReference>$Record.formula_SurvivingSpouse__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>No_Change</name>
+        <label>No Change</label>
+        <locationX>578</locationX>
+        <locationY>2363</locationY>
+        <connector>
+            <targetReference>Primary_Scenario</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Pension__c</field>
+            <value>
+                <elementReference>$Record.formula_SurvivingSpouse__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>No_Primary_Scenario</name>
+        <label>No Primary Scenario</label>
+        <locationX>578</locationX>
+        <locationY>2855</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Scenario1_Primary__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Scenario2_Primary__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59_formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Scenario__c</field>
+            <value>
+                <stringValue>Default</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Scenario_1_is_Primary</name>
+        <label>Scenario 1 is Primary</label>
+        <locationX>50</locationX>
+        <locationY>2747</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Scenario1_Primary__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59_formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Scenario__c</field>
+            <value>
+                <stringValue>Scenario 1</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_Primary__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_Primary__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Scenario_2_is_Primary</name>
+        <label>Scenario 2 is Primary</label>
+        <locationX>314</locationX>
+        <locationY>2855</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Scenario2_Primary__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59_formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Primary_Scenario__c</field>
+            <value>
+                <stringValue>Scenario 2</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_Primary__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_Primary__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Lead_Again_with_Option_B</name>
+        <label>Update Lead Again with Option B</label>
+        <locationX>248</locationX>
+        <locationY>2039</locationY>
+        <connector>
+            <targetReference>Annuity_Scenario</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AgeFactorformula_OptionB_Text__c</field>
+            <value>
+                <elementReference>$Record.AgeFactorformula_OptionB__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Basic__c</field>
+            <value>
+                <elementReference>basicSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionA__c</field>
+            <value>
+                <elementReference>aSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionB__c</field>
+            <value>
+                <elementReference>BSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionC__c</field>
+            <value>
+                <elementReference>CSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>total_Years__c</field>
+            <value>
+                <elementReference>formula_totalDollars</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateLead</name>
+        <label>updateLead</label>
+        <locationX>380</locationX>
+        <locationY>1847</locationY>
+        <connector>
+            <targetReference>Update_Lead_Again_with_Option_B</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AgeFactorformula_OptionB_Text__c</field>
+            <value>
+                <elementReference>$Record.AgeFactorformula_OptionB__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AgeFactorformula_OptionC_Text__c</field>
+            <value>
+                <elementReference>$Record.AgeFactorformula_OptionC__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Basic__c</field>
+            <value>
+                <elementReference>basicSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CSRS_Annuity_Retirement__c</field>
+            <value>
+                <elementReference>formula_annuityDefault</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59_formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FEGLI_Code__c</field>
+            <value>
+                <elementReference>getFegliCode.FEGLI_Values__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FEGLI_Plan__c</field>
+            <value>
+                <elementReference>fegliPicklist</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionA__c</field>
+            <value>
+                <elementReference>aSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionB__c</field>
+            <value>
+                <elementReference>BSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionC__c</field>
+            <value>
+                <elementReference>CSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Option_B_Choice_Selection__c</field>
+            <value>
+                <elementReference>getFegliCode.BChoiceValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Option_C_Choice_Selection__c</field>
+            <value>
+                <elementReference>getFegliCode.CChoiceValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Pension__c</field>
+            <value>
+                <elementReference>$Record.formula_SurvivingSpouse__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Starting_Age__c</field>
+            <value>
+                <elementReference>$Record.Contact_Age__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TSP_Balance__c</field>
+            <value>
+                <elementReference>formula_tspBalance</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateLead_with_Override</name>
+        <label>updateLead with Override</label>
+        <locationX>116</locationX>
+        <locationY>1847</locationY>
+        <connector>
+            <targetReference>Update_Lead_Again_with_Option_B</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AgeFactorformula_OptionB_Text__c</field>
+            <value>
+                <elementReference>$Record.AgeFactorformula_OptionB__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AgeFactorformula_OptionC_Text__c</field>
+            <value>
+                <elementReference>$Record.AgeFactorformula_OptionC__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Basic__c</field>
+            <value>
+                <elementReference>basicSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CSRS_Annuity_Retirement__c</field>
+            <value>
+                <elementReference>formula_annuityDefault</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59_formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FEGLI_Code__c</field>
+            <value>
+                <elementReference>getFegliCode.FEGLI_Values__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FEGLI_Plan__c</field>
+            <value>
+                <elementReference>fegliPicklist</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionA__c</field>
+            <value>
+                <elementReference>aSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionB__c</field>
+            <value>
+                <elementReference>BSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OptionC__c</field>
+            <value>
+                <elementReference>CSet</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Option_B_Choice_Selection__c</field>
+            <value>
+                <elementReference>getFegliCode.BChoiceValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Option_C_Choice_Selection__c</field>
+            <value>
+                <elementReference>getFegliCode.CChoiceValue__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Predicted_Pension__c</field>
+            <value>
+                <elementReference>formula_pension</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario1_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Scenario2_YOS__c</field>
+            <value>
+                <elementReference>formula_YOS2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Spouse_Pension__c</field>
+            <value>
+                <elementReference>$Record.formula_SurvivingSpouse__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Starting_Age_Set__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TSP_Balance__c</field>
+            <value>
+                <elementReference>formula_tspBalance</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_34__c</field>
+            <value>
+                <elementReference>formula_34</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_35_39__c</field>
+            <value>
+                <elementReference>formula_3539</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_40_44__c</field>
+            <value>
+                <elementReference>formula_4044</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_45_49__c</field>
+            <value>
+                <elementReference>formula_4549</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_50_54__c</field>
+            <value>
+                <elementReference>formula_5054</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_55_59__c</field>
+            <value>
+                <elementReference>formula_5559</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_60_64__c</field>
+            <value>
+                <elementReference>formula_6064</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_65_69__c</field>
+            <value>
+                <elementReference>formula_6569</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_70_74__c</field>
+            <value>
+                <elementReference>formula_7074</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_75_79__c</field>
+            <value>
+                <elementReference>formula_7579</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Years_80__c</field>
+            <value>
+                <elementReference>formula_80</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateStandardLead</name>
+        <label>updateStandardLead</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Date_Turning_59__c</field>
+            <value>
+                <elementReference>$Record.Date_Turning_59__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X401K_TaxFree__c</field>
+            <value>
+                <elementReference>$Record.formula_401k_TaxFREE__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X401K_Tax__c</field>
+            <value>
+                <elementReference>$Record.formula_401k_Tax__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>totalTaxes_Currency__c</field>
+            <value>
+                <elementReference>$Record.totalTaxes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>419</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>recordType</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>aSet</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>basicSet</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>BSet</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>checkbox</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>CSet</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>fegliPicklist</name>
+        <dataType>Multipicklist</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>startingage</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>totalofyears</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>totalTaxes</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+        <value>
+            <elementReference>$Record.totalTaxes__c</elementReference>
+        </value>
+    </variables>
+</Flow>
